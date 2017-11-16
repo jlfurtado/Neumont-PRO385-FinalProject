@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rigidbody.angularVelocity = new Vector3(0.0f, m_torqueForce * Input.GetAxis(m_rotateAxis), 0.0f);
         Vector3 direction = (transform.forward * Input.GetAxis(m_verticalAxis) + transform.right * Input.GetAxis(m_horizontalAxis)).normalized;
-        float compensatedMove = m_moveForce * Mathf.Clamp(Vector3.Dot(transform.forward, direction), m_movePenaltyCap, 1.0f);
+        float compensatedMove = m_moveForce * Mathf.Clamp(Vector3.Dot(-transform.forward, direction), m_movePenaltyCap, 1.0f);
         m_rigidbody.velocity = new Vector3(direction.x * compensatedMove, m_rigidbody.velocity.y, direction.z * compensatedMove);
 
         if (m_jumpCheck.grounded)

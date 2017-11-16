@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4824494907868176}
   - component: {fileID: 33339753049075498}
-  - component: {fileID: 65857025283112130}
   - component: {fileID: 23732406702394344}
   - component: {fileID: 54252572936580208}
   - component: {fileID: 114752521663196754}
+  - component: {fileID: 65190626689096974}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265416807601966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.56, z: 0}
+  m_LocalPosition: {x: -8.7, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4750792227476380}
@@ -113,7 +113,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265416807601966}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: e8c7a7988e4a44c45a38f1b83e9855f1, type: 3}
 --- !u!54 &54252572936580208
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -129,6 +129,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
+--- !u!65 &65190626689096974
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265416807601966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5779514, y: 1.9833138, z: 5.857514}
+  m_Center: {x: -0.030009627, y: 0.9916569, z: 1.5962293}
 --- !u!65 &65210698730247082
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -140,18 +152,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.99, y: 0.1, z: 0.99}
-  m_Center: {x: 0, y: -0.5, z: 0}
---- !u!65 &65857025283112130
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265416807601966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114496640296422864
 MonoBehaviour:
