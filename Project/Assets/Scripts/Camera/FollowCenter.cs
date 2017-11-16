@@ -15,7 +15,7 @@ public class FollowCenter : MonoBehaviour {
     private float shakeTimer;
     private Vector3 vel;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         Vector3 center = CalcCenter();
         float avgDist = CalcAvgDist(center);
