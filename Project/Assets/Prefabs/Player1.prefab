@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54252572936580208}
   - component: {fileID: 114752521663196754}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,6 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90686bc6f048784ca5d3485c6472679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_torqueForce: 5
+  m_torqueForce: 3.5
   m_moveForce: 5
   m_jumpForce: 400
+  m_movePenaltyCap: 0.67
+  m_rotateAxis: Rotate
+  m_verticalAxis: Vertical
+  m_horizontalAxis: Horizontal
+  m_jumpAxis: Jump
