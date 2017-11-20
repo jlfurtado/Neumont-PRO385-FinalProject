@@ -19,7 +19,7 @@ public class FollowCenter : MonoBehaviour {
     void FixedUpdate()
     {
         Vector3 center = CalcCenter();
-        Vector3 avgForward = CalcForward();
+        Vector3 avgForward = CalcForward().normalized;
         float avgDist = CalcAvgDist(center);
 
         // hack *= -1.0f

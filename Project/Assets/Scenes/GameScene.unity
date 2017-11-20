@@ -490,7 +490,9 @@ MonoBehaviour:
   m_spawnCount: 1000
   m_minSpawn: {x: -500, y: 100, z: -500}
   m_maxSpawn: {x: 500, y: 1000, z: 500}
+  m_boxesPerDir: 10
   m_scale: 10
+  m_shrinkBox: 0.9
   m_isMesh: 1
 --- !u!4 &923088370
 Transform:
@@ -529,7 +531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1294399018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 314f35845650322489786713493be2cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 77545f7d43a95ce4c9322abab3cfae80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_prefabs:
@@ -633,10 +635,12 @@ MonoBehaviour:
   - {fileID: 100002, guid: c2e29755249c1134e993f1a226321f45, type: 3}
   - {fileID: 100002, guid: a585aa3fb1026d5429a1a90973844787, type: 3}
   - {fileID: 100002, guid: 5e2db932a99dda2459a545338701d0b6, type: 3}
-  m_spawnCount: 1000
+  m_spawnCount: 900
   m_minSpawn: {x: -500, y: 0, z: -500}
   m_maxSpawn: {x: 500, y: 0, z: 500}
+  m_boxesPerDir: 30
   m_scale: 1
+  m_shrinkBox: 0.95
   m_isMesh: 0
 --- !u!4 &1294399020
 Transform:
@@ -856,6 +860,11 @@ Prefab:
       propertyPath: m_followed.Array.data[1]
       value: 
       objectReference: {fileID: 1911458053}
+    - target: {fileID: 114785406943653460, guid: d773458f200794e419c1812fbfad3388,
+        type: 2}
+      propertyPath: offsetMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d773458f200794e419c1812fbfad3388, type: 2}
   m_IsPrefabParent: 0
