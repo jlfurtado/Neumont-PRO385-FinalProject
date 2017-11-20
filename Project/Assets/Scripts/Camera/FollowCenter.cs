@@ -6,7 +6,8 @@ public class FollowCenter : MonoBehaviour {
     [SerializeField] private GameObject[] m_followed;
 
     [SerializeField] private float shakeStrength = 10.0f;
-    [SerializeField] private Vector3 offset;
+    [SerializeField] private float backBaseAmount;
+    [SerializeField] private float upBaseAmount;
     [SerializeField] private float speed;
     [SerializeField] private float rotateSpeed;
     [SerializeField] private float slowdownRadius;
@@ -18,9 +19,12 @@ public class FollowCenter : MonoBehaviour {
     void FixedUpdate()
     {
         Vector3 center = CalcCenter();
+        Vector3 avgForward = CalcForward();
         float avgDist = CalcAvgDist(center);
 
-        Vector3 toPos = center + (offset.normalized * offsetMultiplier * avgDist);
+        // hack *= -1.0f
+        Vector3 backVec = avgForward * backBaseAmount + Vector3.up * upBaseAmount;
+        Vector3 toPos = center + (backVec * offsetMultiplier * avgDist);
         Vector3 move = (toPos - transform.position);
         float dist = move.magnitude;
         if (dist > 0.0f)
@@ -63,6 +67,17 @@ public class FollowCenter : MonoBehaviour {
         }
 
         return center / m_followed.Length;
+    }
+
+    private Vector3 CalcForward()
+    {
+        Vector3 forward = m_followed[0].transform.forward; // must have at least one!
+        for (int i = 1; i < m_followed.Length; ++i)
+        {
+            forward += m_followed[i].transform.forward;
+        }
+
+        return forward / m_followed.Length;
     }
 
     private float CalcAvgDist(Vector3 center)

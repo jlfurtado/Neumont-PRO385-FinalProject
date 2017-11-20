@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 1265416807601966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -27, y: 1.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4750792227476380}
   m_Father: {fileID: 0}
@@ -147,7 +147,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265416807601966}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cfe0a86b36013c346a1a85d67ee019b3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -177,10 +177,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_torqueForce: 3.5
-  m_moveForce: 5
-  m_jumpForce: 400
+  m_moveForce: 20
+  m_jumpForce: 500
   m_movePenaltyCap: 0.67
   m_rotateAxis: Rotate
   m_verticalAxis: Vertical
   m_horizontalAxis: Horizontal
   m_jumpAxis: Jump
+  m_otherPlayer: {fileID: 0}
+  m_lowPlayerDistanceThreshold: 100
+  m_highPlayerDistanceThreshold: 150

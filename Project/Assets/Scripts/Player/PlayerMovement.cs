@@ -8,14 +8,17 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody m_rigidbody;
     private JumpCheck m_jumpCheck;
-    public float m_torqueForce;
-    public float m_moveForce;
-    public float m_jumpForce;
+    [SerializeField] private float m_torqueForce;
+    [SerializeField] private float m_moveForce;
+    [SerializeField] private float m_jumpForce;
     [SerializeField, Range(0.0f, 1.0f)] float m_movePenaltyCap;
     [SerializeField] private string m_rotateAxis;
     [SerializeField] private string m_verticalAxis;
     [SerializeField] private string m_horizontalAxis;
     [SerializeField] private string m_jumpAxis;
+    [SerializeField] private PlayerMovement m_otherPlayer;
+    [SerializeField] private float m_lowPlayerDistanceThreshold;
+    [SerializeField] private float m_highPlayerDistanceThreshold;
 
     // Use this for initialization
     void Start()
@@ -29,10 +32,20 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rigidbody.angularVelocity = new Vector3(0.0f, m_torqueForce * Input.GetAxis(m_rotateAxis), 0.0f);
         Vector3 direction = (transform.forward * Input.GetAxis(m_verticalAxis) + transform.right * Input.GetAxis(m_horizontalAxis)).normalized;
+        Vector3 toOtherPlayer = (m_otherPlayer.transform.position - transform.position);
+
         float compensatedMove = m_moveForce * Mathf.Clamp(Vector3.Dot(-transform.forward, direction), m_movePenaltyCap, 1.0f);
+
+        // if player going away from other player AND player distance > thresholdDistance
+        if ((Vector3.Dot(direction, toOtherPlayer.normalized) < 0.0f) && toOtherPlayer.magnitude > m_lowPlayerDistanceThreshold)
+        { 
+            float interp = (toOtherPlayer.magnitude - m_lowPlayerDistanceThreshold) / (m_highPlayerDistanceThreshold - m_lowPlayerDistanceThreshold);
+            compensatedMove = Mathf.Lerp(compensatedMove, 0, interp);
+        }
+
         m_rigidbody.velocity = new Vector3(direction.x * compensatedMove, m_rigidbody.velocity.y, direction.z * compensatedMove);
 
-        if (m_jumpCheck.grounded)
+        if (true || m_jumpCheck.grounded)
         {
             if (Input.GetAxis(m_jumpAxis) != 0.0f)
             {
