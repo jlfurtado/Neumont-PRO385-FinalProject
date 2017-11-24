@@ -27,7 +27,13 @@ public class PlaceRandomly2D : MonoBehaviour {
 
             GameObject made = HelperFuncs.MakeAt(m_prefabs[rand.Next(0, m_prefabs.Length)], HelperFuncs.RandVec(m_minSpawn + lowOffset + xyzDelta, m_minSpawn + highOffset + xyzDelta), m_scale, gameObject, "RandomPlacement|" + i);
             System.Type t = m_isMesh ? typeof(MeshCollider) : typeof(CapsuleCollider);
-            made.transform.GetChild(0).gameObject.AddComponent(t);
+            GameObject g = made.transform.GetChild(0).gameObject;
+            g.AddComponent(t);
+
+            if (m_isMesh) // hax
+            {
+                g.AddComponent<BurnableScript>();   
+            }
         }
     }
 

@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4308663805616884}
   - component: {fileID: 198564857015845028}
   - component: {fileID: 199387689478652750}
-  - component: {fileID: 114671258138378036}
   m_Layer: 0
   m_Name: FireBreath
   m_TagString: Untagged
@@ -229,17 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
---- !u!114 &114671258138378036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1087821153134862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114752521663196754
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -439,6 +439,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6712f70211479104396d6a34a15e9822, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1474052092
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162509093732332, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 178ec4445092a1b4bbbab749ad1e043d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!224 &1913803882 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224829031544229970, guid: 6712f70211479104396d6a34a15e9822,
