@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody m_rigidbody;
-    private JumpCheck m_jumpCheck;
     [SerializeField] private float m_torqueForce;
     [SerializeField] private float m_moveForce;
     [SerializeField] private float m_jumpForce;
@@ -24,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
-        m_jumpCheck = GetComponentInChildren<JumpCheck>();
     }
 
     // Update is called once per frame
@@ -45,13 +43,11 @@ public class PlayerMovement : MonoBehaviour
 
         m_rigidbody.velocity = new Vector3(direction.x * compensatedMove, m_rigidbody.velocity.y, direction.z * compensatedMove);
 
-        if (true || m_jumpCheck.grounded)
+
+        if (Input.GetAxis(m_jumpAxis) != 0.0f)
         {
-            if (Input.GetAxis(m_jumpAxis) != 0.0f)
-            {
-                m_rigidbody.velocity = new Vector3(m_rigidbody.velocity.x, 0.0f, m_rigidbody.velocity.z);
-                m_rigidbody.AddForce(Vector3.up * m_jumpForce);
-            }
+            m_rigidbody.velocity = new Vector3(m_rigidbody.velocity.x, 0.0f, m_rigidbody.velocity.z);
+            m_rigidbody.AddForce(Vector3.up * m_jumpForce);
         }
     }
 }
