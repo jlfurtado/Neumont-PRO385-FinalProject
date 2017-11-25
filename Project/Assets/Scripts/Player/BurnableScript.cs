@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BurnableScript : MonoBehaviour {
 
-    [SerializeField] private float m_fireAmount;
-    [SerializeField] private float m_burnOutDuration;
+    public float m_fireAmount;
+    public float m_burnOutDuration;
     private float m_currentFireAmount;
     private bool m_isBurningOut;
     private float m_maxBurn;
@@ -22,7 +22,7 @@ public class BurnableScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         m_isBurningOut = false;
-        m_burn = GetComponent<ParticleSystem>();
+        m_burn = GetComponentInChildren<ParticleSystem>();
         m_maxBurn = m_burn.emission.rateOverTimeMultiplier;
         m_maxScale = transform.localScale;
         m_lowestBurn = 0.0f;
@@ -68,7 +68,6 @@ public class BurnableScript : MonoBehaviour {
 
     IEnumerator BurnOut()
     {
-        Debug.Log("IS BURNING OUT");
         yield return new WaitForSeconds(m_burnOutDuration);
         gameObject.SetActive(false);
     }

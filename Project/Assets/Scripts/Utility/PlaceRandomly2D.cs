@@ -11,9 +11,11 @@ public class PlaceRandomly2D : MonoBehaviour {
     [SerializeField] private float m_scale;
     [SerializeField] [Range(0.0f, 1.0f)] private float m_shrinkBox = 1.0f;
     [SerializeField] private bool m_isMesh;
+    [SerializeField] private float m_fireAmount;
+    [SerializeField] private float m_burnoutDuration;
+    [SerializeField] private GameObject m_particlePrefab;
     private static System.Random rand = new System.Random();
 
-	// Use this for initialization
 	void Awake () {
         Vector3 delta = (m_maxSpawn - m_minSpawn) / m_boxesPerDir;
         float rmv = ((1.0f - m_shrinkBox) / 2.0f);
@@ -30,9 +32,17 @@ public class PlaceRandomly2D : MonoBehaviour {
             GameObject g = made.transform.GetChild(0).gameObject;
             g.AddComponent(t);
 
-            if (m_isMesh) // hax
+            if (!m_isMesh) // hax
             {
-                g.AddComponent<BurnableScript>();   
+                GameObject spawnedParticles = Instantiate(m_particlePrefab);
+                spawnedParticles.transform.SetParent(g.transform);
+                spawnedParticles.transform.localPosition = Vector3.zero;
+                BurnableScript bs = g.AddComponent<BurnableScript>();
+                bs.m_burnOutDuration = m_burnoutDuration;
+                bs.m_fireAmount = m_fireAmount;
+                g.tag = "Tree";
+                g.layer = LayerMask.NameToLayer("Tree");
+
             }
         }
     }

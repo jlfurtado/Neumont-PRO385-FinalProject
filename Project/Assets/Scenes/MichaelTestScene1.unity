@@ -3497,35 +3497,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a0a745273587f3458729bd3def308a1, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &191340903 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1145186569995962, guid: 07f0e771104d3be4f9b7979a29e09b84,
-    type: 2}
-  m_PrefabInternal: {fileID: 1663774413}
---- !u!136 &191340907
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 191340903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 5
-  m_Height: 30
-  m_Direction: 2
-  m_Center: {x: -0.24907494, y: 0.2943163, z: -15.014021}
---- !u!114 &191340908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 191340903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 237684072ec447a45846356fdcb2713f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &264080065
 GameObject:
   m_ObjectHideFlags: 0
@@ -24095,22 +24066,7 @@ Prefab:
       propertyPath: m_otherPlayer
       value: 
       objectReference: {fileID: 958358918}
-    - target: {fileID: 4655497190471568, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 198601661293735014, guid: 07f0e771104d3be4f9b7979a29e09b84,
-        type: 2}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 198601661293735014, guid: 07f0e771104d3be4f9b7979a29e09b84,
-        type: 2}
-      propertyPath: randomSeed
-      value: 319940360
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114590419390145508, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1907720977
@@ -24346,7 +24302,6 @@ Prefab:
       propertyPath: m_otherPlayer
       value: 
       objectReference: {fileID: 700205452}
-    m_RemovedComponents:
-    - {fileID: 114671258138378036, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
   m_IsPrefabParent: 0

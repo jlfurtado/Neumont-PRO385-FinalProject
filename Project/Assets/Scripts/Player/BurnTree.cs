@@ -18,7 +18,7 @@ public class BurnTree : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Tree") && m_breath.IsBreathingFire())
+        if (m_breath.IsBreathingFire())
         {
             BurnableScript burnable = other.gameObject.GetComponent<BurnableScript>();
             if (!burnable.IsMaxFire())

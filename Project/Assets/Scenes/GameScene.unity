@@ -772,6 +772,10 @@ MonoBehaviour:
   m_scale: 1
   m_shrinkBox: 0.95
   m_isMesh: 0
+  m_fireAmount: 5
+  m_burnoutDuration: 5
+  m_particlePrefab: {fileID: 1074766950060858, guid: cbc0364d31300d747a96db0293203886,
+    type: 2}
 --- !u!4 &1294399020
 Transform:
   m_ObjectHideFlags: 0

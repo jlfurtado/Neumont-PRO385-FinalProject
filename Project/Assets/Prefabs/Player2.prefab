@@ -21,7 +21,9 @@ GameObject:
   - component: {fileID: 4308663805616884}
   - component: {fileID: 198564857015845028}
   - component: {fileID: 199387689478652750}
-  m_Layer: 0
+  - component: {fileID: 136189535676071616}
+  - component: {fileID: 114066227277622362}
+  m_Layer: 9
   m_Name: FireBreath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,6 +218,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99, y: 0.1, z: 0.99}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114066227277622362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087821153134862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237684072ec447a45846356fdcb2713f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114496640296422864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,6 +276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fireAxis: P2Fire
   m_breath: {fileID: 198564857015845028}
+--- !u!136 &136189535676071616
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087821153134862}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 5
+  m_Height: 30
+  m_Direction: 2
+  m_Center: {x: -0.24907494, y: 0.2943163, z: -15.014021}
 --- !u!198 &198564857015845028
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -322,7 +348,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2024657809
+  randomSeed: 56782366
   InitialModule:
     serializedVersion: 3
     enabled: 1
