@@ -22,7 +22,10 @@ public class BreathFire : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         var emitter = m_breath.emission;
-        emitter.rateOverTime = Input.GetAxis(m_fireAxis) * m_maxEmission;
+        emitter.rateOverTime = Mathf.Abs(Input.GetAxis(m_fireAxis) * m_maxEmission);
         m_isBreathing = Input.GetAxis(m_fireAxis) != 0.0f;
+        //Debug.Log(m_fireAxis + ": " + Input.GetAxis(m_fireAxis));
+        //Debug.Log("P1: " + Input.GetAxis("Fire"));
+        //Debug.Log("P2: " + Input.GetAxis("P2Fire"));
 	}
 }
