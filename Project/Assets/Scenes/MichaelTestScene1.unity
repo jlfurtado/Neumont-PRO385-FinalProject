@@ -3579,8 +3579,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264080065}
-  m_LocalRotation: {x: 0.00014858223, y: -0.87376827, z: 0.4863424, w: 0.00025631767}
-  m_LocalPosition: {x: 0.033941574, y: 95.105896, z: 58.966022}
+  m_LocalRotation: {x: 0.0065510646, y: 0.94329816, z: -0.33135587, w: 0.018683791}
+  m_LocalPosition: {x: -31.98796, y: 44.53747, z: 40.086227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20514,6 +20514,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4521292070001680, guid: 519c464c6cc5f9448bb7965556bb1d1e, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 519c464c6cc5f9448bb7965556bb1d1e, type: 2}
   m_IsPrefabParent: 0
@@ -20644,7 +20648,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 26637b0aa28d4f149b73e0d156e8e1b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20787,7 +20791,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1946354449
+  randomSeed: -176905777
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -24363,11 +24367,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 68399d953964cb244ae5c02b255ae596, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 68399d953964cb244ae5c02b255ae596, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68399d953964cb244ae5c02b255ae596, type: 3}

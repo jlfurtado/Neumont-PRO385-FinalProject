@@ -5,23 +5,12 @@ using UnityEngine.Events;
 
 public class RingDetection : MonoBehaviour {
 
-    [SerializeField] private UnityEvent m_callback;
+    //TODO: get the win/lose thing and cache it
 
     private void OnTriggerEnter(Collider other)
     {
-        m_callback.Invoke();
-        MeshCollider[] meshColliders = gameObject.GetComponents<MeshCollider>();
-        for (int k = 0; k < meshColliders.Length; k++)
-        {
-            if (meshColliders[k].isTrigger)
-            {
-                meshColliders[k].enabled = false;
-            }
-        }
-    }
-
-    public void TestCallback()
-    {
-        Debug.Log("Hello Callback");
+        //TODO: Call a method to notify win/lose of ring death
+        GetComponentInChildren<RingParticle>().PlayEffect();
+        transform.parent.parent.gameObject.SetActive(false);
     }
 }
