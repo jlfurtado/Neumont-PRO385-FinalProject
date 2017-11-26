@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceRandomly2D : MonoBehaviour {
+public class TreePlacer : MonoBehaviour {
     [SerializeField] private GameObject[] m_prefabs;
     [SerializeField] private int m_spawnCount;
     [SerializeField] private Vector3 m_minSpawn;
@@ -10,7 +10,6 @@ public class PlaceRandomly2D : MonoBehaviour {
     [SerializeField] private int m_boxesPerDir;
     [SerializeField] private float m_scale;
     [SerializeField] [Range(0.0f, 1.0f)] private float m_shrinkBox = 1.0f;
-    [SerializeField] private bool m_isMesh;
     [SerializeField] private float m_fireAmount;
     [SerializeField] private float m_burnoutDuration;
     [SerializeField] private GameObject m_particlePrefab;
@@ -28,22 +27,16 @@ public class PlaceRandomly2D : MonoBehaviour {
             Vector3 xyzDelta = new Vector3(xLoc * delta.x, delta.y, zLoc * delta.z);
 
             GameObject made = HelperFuncs.MakeAt(m_prefabs[rand.Next(0, m_prefabs.Length)], HelperFuncs.RandVec(m_minSpawn + lowOffset + xyzDelta, m_minSpawn + highOffset + xyzDelta), m_scale, gameObject, "RandomPlacement|" + i);
-            System.Type t = m_isMesh ? typeof(MeshCollider) : typeof(CapsuleCollider);
             GameObject g = made.transform.GetChild(0).gameObject;
-            g.AddComponent(t);
-
-            if (!m_isMesh) // hax
-            {
-                GameObject spawnedParticles = Instantiate(m_particlePrefab);
-                spawnedParticles.transform.SetParent(g.transform);
-                spawnedParticles.transform.localPosition = Vector3.zero;
-                BurnableScript bs = g.AddComponent<BurnableScript>();
-                bs.m_burnOutDuration = m_burnoutDuration;
-                bs.m_fireAmount = m_fireAmount;
-                g.tag = "Tree";
-                g.layer = LayerMask.NameToLayer("Tree");
-
-            }
+            g.AddComponent<CapsuleCollider>();
+            GameObject spawnedParticles = Instantiate(m_particlePrefab);
+            spawnedParticles.transform.SetParent(g.transform);
+            spawnedParticles.transform.localPosition = Vector3.zero;
+            BurnableScript bs = g.AddComponent<BurnableScript>();
+            bs.m_burnOutDuration = m_burnoutDuration;
+            bs.m_fireAmount = m_fireAmount;
+            g.tag = "Tree";
+            g.layer = LayerMask.NameToLayer("Tree");
         }
     }
 

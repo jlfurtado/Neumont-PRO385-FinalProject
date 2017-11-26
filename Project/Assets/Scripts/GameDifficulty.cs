@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class GameDifficulty : MonoBehaviour {
     [SerializeField] private string m_difficultyTag;
-    [SerializeField] private Text m_test;
+    [SerializeField] private Text m_objectiveText;
+    [SerializeField] private Text m_timeText;
 
     private void Start()
     {
         Difficulty difficulty = GameObject.FindGameObjectWithTag(m_difficultyTag).GetComponent<Difficulty>();
-        m_test.text = "D: " + difficulty.GetDifficulty();
+        difficulty.SetText(m_timeText, m_objectiveText);
     }
 }

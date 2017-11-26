@@ -9,7 +9,7 @@ public static class HelperFuncs
     public static GameObject MakeAt(GameObject prefab, Vector3 position, float scale, GameObject parent, string name)
     {
         GameObject created = GameObject.Instantiate(prefab);
-        created.transform.parent = parent.transform;
+        created.transform.SetParent(parent.transform);
         created.transform.position = Vector3.zero;
         created.transform.localPosition = position;
         created.transform.localScale = Vector3.one * scale;

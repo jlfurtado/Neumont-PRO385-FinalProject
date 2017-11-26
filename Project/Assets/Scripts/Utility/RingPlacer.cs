@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceRandomly3D : MonoBehaviour {
+public class RingPlacer : MonoBehaviour {
     [SerializeField] private GameObject[] m_prefabs;
+    [SerializeField] private GameObject m_ringTriggerPrefab;
     [SerializeField] private Vector3 m_minSpawn;
     [SerializeField] private Vector3 m_maxSpawn;
     [SerializeField] private int m_boxesPerX;
@@ -11,7 +12,6 @@ public class PlaceRandomly3D : MonoBehaviour {
     [SerializeField] private int m_boxesPerZ;
     [SerializeField] private float m_scale;
     [SerializeField] [Range(0.0f, 1.0f)] private float m_shrinkBox = 1.0f;
-    [SerializeField] private bool m_isMesh;
     private static System.Random rand = new System.Random();
 
 	// Use this for initialization
@@ -30,8 +30,9 @@ public class PlaceRandomly3D : MonoBehaviour {
             Vector3 xyzDelta = new Vector3(xLoc * delta.x, yLoc * delta.y, zLoc * delta.z);
 
             GameObject made = HelperFuncs.MakeAt(m_prefabs[rand.Next(0, m_prefabs.Length)], HelperFuncs.RandVec(m_minSpawn + lowOffset + xyzDelta, m_minSpawn + highOffset + xyzDelta), m_scale, gameObject, "RandomPlacement|" + i);
-            System.Type t = m_isMesh ? typeof(MeshCollider) : typeof(CapsuleCollider);
-            made.transform.GetChild(0).gameObject.AddComponent(t);
+            made.transform.GetChild(0).gameObject.AddComponent<MeshCollider>();
+
+            HelperFuncs.MakeAt(m_ringTriggerPrefab, Vector3.zero, 1.0f, made.transform.GetChild(0).gameObject, "Trigger|" + i);
         }
     }
 

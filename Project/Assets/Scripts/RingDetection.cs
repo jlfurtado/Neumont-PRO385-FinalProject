@@ -5,11 +5,16 @@ using UnityEngine.Events;
 
 public class RingDetection : MonoBehaviour {
 
-    //TODO: get the win/lose thing and cache it
+    private Difficulty m_difficulty;
+
+    private void Start()
+    {
+        m_difficulty = GameObject.FindGameObjectWithTag("Difficulty").GetComponent<Difficulty>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        //TODO: Call a method to notify win/lose of ring death
+        m_difficulty.CollectRing();
         GetComponentInChildren<RingParticle>().PlayEffect();
         transform.parent.parent.gameObject.SetActive(false);
     }

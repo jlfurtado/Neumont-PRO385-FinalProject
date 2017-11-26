@@ -13,6 +13,7 @@ public class BurnableScript : MonoBehaviour {
     private Vector3 m_maxScale;
     private bool m_beingBurnt;
     private float m_lowestBurn;
+    private Difficulty m_difficulty;
 
     public void Burning()
     {
@@ -26,7 +27,8 @@ public class BurnableScript : MonoBehaviour {
         m_maxBurn = m_burn.emission.rateOverTimeMultiplier;
         m_maxScale = transform.localScale;
         m_lowestBurn = 0.0f;
-	}
+        m_difficulty = GameObject.FindGameObjectWithTag("Difficulty").GetComponent<Difficulty>();
+    }
 
     public bool IsMaxFire()
     {
@@ -69,6 +71,7 @@ public class BurnableScript : MonoBehaviour {
     IEnumerator BurnOut()
     {
         yield return new WaitForSeconds(m_burnOutDuration);
+        m_difficulty.BurnTree();
         gameObject.SetActive(false);
     }
 }

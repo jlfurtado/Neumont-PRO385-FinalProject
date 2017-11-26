@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4585180403248732}
   - component: {fileID: 114609664188491370}
+  - component: {fileID: 114185498161880784}
   m_Layer: 0
   m_Name: Diffuculty
   m_TagString: Difficulty
@@ -40,6 +41,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114185498161880784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606627070826542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eae9890aca41f84e8f0366d4e1ca734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114609664188491370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,3 +63,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e14c8451a81d64e952739a9cf354b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_timeLimit: 60
+  m_objectsPerDifficulty: 3
+  m_minObjective: 3

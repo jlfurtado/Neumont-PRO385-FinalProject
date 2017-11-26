@@ -10,11 +10,6 @@ public class BurnTree : MonoBehaviour {
 	void Start () {
         m_breath = transform.parent.GetComponent<BreathFire>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerStay(Collider other)
     {
