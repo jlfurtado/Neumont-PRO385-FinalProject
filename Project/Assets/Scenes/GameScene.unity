@@ -576,8 +576,8 @@ MonoBehaviour:
   - {fileID: 100002, guid: 68399d953964cb244ae5c02b255ae596, type: 3}
   m_ringTriggerPrefab: {fileID: 1396352385861914, guid: 519c464c6cc5f9448bb7965556bb1d1e,
     type: 2}
-  m_minSpawn: {x: -500, y: 100, z: -500}
-  m_maxSpawn: {x: 500, y: 1000, z: 500}
+  m_minSpawn: {x: -500, y: 50, z: -500}
+  m_maxSpawn: {x: 500, y: 250, z: 500}
   m_boxesPerX: 5
   m_boxesPerY: 5
   m_boxesPerZ: 5

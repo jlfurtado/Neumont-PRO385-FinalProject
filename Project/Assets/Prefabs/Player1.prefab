@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_torqueForce: 3.5
-  m_moveForce: 20
+  m_moveForce: 25
   m_jumpForce: 500
   m_movePenaltyCap: 0.67
   m_rotateAxis: Rotate
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_horizontalAxis: Horizontal
   m_jumpAxis: Jump
   m_otherPlayer: {fileID: 0}
-  m_lowPlayerDistanceThreshold: 100
-  m_highPlayerDistanceThreshold: 150
+  m_lowPlayerDistanceThreshold: 150
+  m_highPlayerDistanceThreshold: 250
 --- !u!114 &114769389456445690
 MonoBehaviour:
   m_ObjectHideFlags: 1
