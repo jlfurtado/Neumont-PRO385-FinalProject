@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneMover : MonoBehaviour {
 
 	public void MoveToGameScene()
     {
         KeepTagged("Difficulty");
+        SetPlayerName();
         SceneManager.LoadScene(Scenes.GAME);
     }
 
@@ -15,6 +17,12 @@ public class SceneMover : MonoBehaviour {
     {
         DontKeepTagged("Difficulty");
         SceneManager.LoadScene(Scenes.TITLE);
+    }
+
+    public void MoveToOptions()
+    {
+        DontKeepTagged("Difficulty");
+        SceneManager.LoadScene(Scenes.OPTIONS);
     }
 
     public void MoveToGameOver()
@@ -33,5 +41,20 @@ public class SceneMover : MonoBehaviour {
     {
         GameObject tagged = GameObject.FindGameObjectWithTag(tag);
         if (tagged != null) { Destroy(tagged); }
+    }
+
+    private void SetPlayerName()
+    {
+        GameObject inputObj = GameObject.FindGameObjectWithTag(Strings.PLAYER_NAME_INPUT_TAG);
+
+        if (inputObj != null)
+        {
+            InputField inputField = inputObj.GetComponent<InputField>();
+
+            if (inputField != null)
+            {
+                ScoreManager.SetName(inputField.text);
+            }
+        }
     }
 }

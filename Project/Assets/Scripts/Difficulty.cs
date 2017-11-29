@@ -8,6 +8,7 @@ public class Difficulty : MonoBehaviour {
     [SerializeField] private int m_objectsPerDifficulty = 5;
     [SerializeField] private int m_minObjective = 5;
 
+    private ScoreManager m_scoreManager;
     private SceneMover m_sceneMover;
     private Text m_timeText;
     private Text m_objectiveText;
@@ -18,10 +19,12 @@ public class Difficulty : MonoBehaviour {
     private static System.Random rand = new System.Random();
     private bool m_timing = false;
 
-    public void SetText(Text time, Text objective)
+    public void SetText(Text time, Text objective, Text score)
     {
         m_timeText = time;
         m_objectiveText = objective;
+        m_scoreManager.scoreText = score;
+        m_scoreManager.EnsureTextUpdated();
         SetTimeText();
         SetObjectiveText();
     }
@@ -29,6 +32,7 @@ public class Difficulty : MonoBehaviour {
     private void Start()
     {
         m_sceneMover = GetComponent<SceneMover>();
+        m_scoreManager = GetComponent<ScoreManager>();
         CreateWinConditionFromDifficulty();
     }
 
@@ -46,6 +50,7 @@ public class Difficulty : MonoBehaviour {
     public void Increase(int amount)
     {
         m_difficulty += amount;
+        m_scoreManager.AddScore(amount);
         CreateWinConditionFromDifficulty();
     }
 
@@ -72,6 +77,7 @@ public class Difficulty : MonoBehaviour {
         }
         else
         {
+            Destroy(m_scoreManager.gameObject);
             m_sceneMover.MoveToGameOver();
         }
     }
