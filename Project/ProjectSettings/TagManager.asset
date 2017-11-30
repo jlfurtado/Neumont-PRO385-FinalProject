@@ -8,6 +8,7 @@ TagManager:
   - Tree
   - ScoreManager
   - NameInput
+  - UIMusic
   layers:
   - Default
   - TransparentFX

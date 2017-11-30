@@ -7,13 +7,6 @@ static class Strings
 {
     // MAGIC STRING SEARCH REGEX: [^((?!const).)*".+".+$]
 
-    #region Object Tags
-
-    public const string SCORE_MANAGER_TAG = "ScoreManager";
-    public const string PLAYER_TAG = "Player";
-    public const string PLAYER_NAME_INPUT_TAG = "NameInput";
-
-    #endregion
 
     #region Defaults
 

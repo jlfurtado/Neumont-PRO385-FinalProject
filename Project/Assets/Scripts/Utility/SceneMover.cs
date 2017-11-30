@@ -8,26 +8,30 @@ public class SceneMover : MonoBehaviour {
 
 	public void MoveToGameScene()
     {
-        KeepTagged("Difficulty");
+        KeepTagged(Tags.DIFFICULTY);
+        DontKeepTagged(Tags.UI_MUSIC);
         SetPlayerName();
         SceneManager.LoadScene(Scenes.GAME);
     }
 
     public void MoveToTitle()
     {
-        DontKeepTagged("Difficulty");
+        DontKeepTagged(Tags.DIFFICULTY);
+        KeepTagged(Tags.UI_MUSIC);
         SceneManager.LoadScene(Scenes.TITLE);
     }
 
     public void MoveToOptions()
     {
-        DontKeepTagged("Difficulty");
+        DontKeepTagged(Tags.DIFFICULTY);
+        KeepTagged(Tags.UI_MUSIC);
         SceneManager.LoadScene(Scenes.OPTIONS);
     }
 
     public void MoveToGameOver()
     {
-        KeepTagged("Difficulty");
+        KeepTagged(Tags.DIFFICULTY);
+        DontKeepTagged(Tags.UI_MUSIC);
         SceneManager.LoadScene(Scenes.GAME_OVER);
     }
 
@@ -45,7 +49,7 @@ public class SceneMover : MonoBehaviour {
 
     private void SetPlayerName()
     {
-        GameObject inputObj = GameObject.FindGameObjectWithTag(Strings.PLAYER_NAME_INPUT_TAG);
+        GameObject inputObj = GameObject.FindGameObjectWithTag(Tags.PLAYER_NAME_INPUT);
 
         if (inputObj != null)
         {
