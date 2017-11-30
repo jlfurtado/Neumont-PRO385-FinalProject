@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 82630893545646722}
   m_Layer: 0
   m_Name: Cheerful Annoyance
-  m_TagString: Untagged
+  m_TagString: GameBGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b56ace92b9a0524e83f84e0cb55f6d6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0

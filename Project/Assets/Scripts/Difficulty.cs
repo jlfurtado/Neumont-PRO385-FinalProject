@@ -29,10 +29,14 @@ public class Difficulty : MonoBehaviour {
         SetObjectiveText();
     }
 
-    private void Start()
+    private void Awake()
     {
         m_sceneMover = GetComponent<SceneMover>();
         m_scoreManager = GetComponent<ScoreManager>();
+    }
+
+    private void Start()
+    {
         CreateWinConditionFromDifficulty();
     }
 

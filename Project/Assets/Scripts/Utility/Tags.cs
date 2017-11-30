@@ -9,4 +9,5 @@ public static class Tags
     public const string PLAYER= "Player";
     public const string PLAYER_NAME_INPUT = "NameInput";
     public const string DIFFICULTY = "Difficulty";
+    public const string GAME_BGM = "GameBGM";
 }

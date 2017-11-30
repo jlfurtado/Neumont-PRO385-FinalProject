@@ -9,6 +9,7 @@ public class SceneMover : MonoBehaviour {
 	public void MoveToGameScene()
     {
         KeepTagged(Tags.DIFFICULTY);
+        KeepTagged(Tags.GAME_BGM);
         DontKeepTagged(Tags.UI_MUSIC);
         SetPlayerName();
         SceneManager.LoadScene(Scenes.GAME);
@@ -18,6 +19,7 @@ public class SceneMover : MonoBehaviour {
     {
         DontKeepTagged(Tags.DIFFICULTY);
         KeepTagged(Tags.UI_MUSIC);
+        DontKeepTagged(Tags.GAME_BGM);
         SceneManager.LoadScene(Scenes.TITLE);
     }
 
@@ -25,6 +27,7 @@ public class SceneMover : MonoBehaviour {
     {
         DontKeepTagged(Tags.DIFFICULTY);
         KeepTagged(Tags.UI_MUSIC);
+        DontKeepTagged(Tags.GAME_BGM);
         SceneManager.LoadScene(Scenes.OPTIONS);
     }
 
@@ -32,6 +35,7 @@ public class SceneMover : MonoBehaviour {
     {
         KeepTagged(Tags.DIFFICULTY);
         DontKeepTagged(Tags.UI_MUSIC);
+        DontKeepTagged(Tags.GAME_BGM);
         SceneManager.LoadScene(Scenes.GAME_OVER);
     }
 
