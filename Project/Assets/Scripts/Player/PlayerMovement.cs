@@ -18,11 +18,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerMovement m_otherPlayer;
     [SerializeField] private float m_lowPlayerDistanceThreshold;
     [SerializeField] private float m_highPlayerDistanceThreshold;
+    private AudioSource m_flap;
 
     // Use this for initialization
     void Start()
     {
         m_rigidbody = GetComponent<Rigidbody>();
+        m_flap = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         {
             m_rigidbody.velocity = new Vector3(m_rigidbody.velocity.x, 0.0f, m_rigidbody.velocity.z);
             m_rigidbody.AddForce(Vector3.up * m_jumpForce);
+            if(!m_flap.isPlaying)m_flap.Play();
+        }
+        else
+        {
+            m_flap.Stop();
         }
     }
 }
