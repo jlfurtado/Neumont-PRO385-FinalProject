@@ -39,6 +39,12 @@ public class SceneMover : MonoBehaviour {
         SceneManager.LoadScene(Scenes.GAME_OVER);
     }
 
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     private void KeepTagged(string tag)
     {
         GameObject tagged = GameObject.FindGameObjectWithTag(tag);
