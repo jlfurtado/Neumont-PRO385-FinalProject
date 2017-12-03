@@ -16,6 +16,6 @@ public class RingDetection : MonoBehaviour {
     {
         m_difficulty.CollectRing();
         GetComponentInChildren<RingParticle>().PlayEffect();
-        transform.parent.parent.gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
     }
 }

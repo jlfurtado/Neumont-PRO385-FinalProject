@@ -8,13 +8,17 @@ public static class HelperFuncs
 
     public static GameObject MakeAt(GameObject prefab, Vector3 position, float scale, GameObject parent, string name)
     {
-        GameObject created = GameObject.Instantiate(prefab);
-        created.transform.SetParent(parent.transform);
-        created.transform.position = Vector3.zero;
-        created.transform.localPosition = position;
-        created.transform.localScale = Vector3.one * scale;
-        created.name = name;
-        return created;
+        return PutAt(GameObject.Instantiate(prefab), position, scale, parent, name);
+    }
+
+    public static GameObject PutAt(GameObject obj, Vector3 position, float scale, GameObject parent, string name)
+    {
+        obj.transform.SetParent(parent.transform);
+        obj.transform.position = Vector3.zero;
+        obj.transform.localPosition = position;
+        obj.transform.localScale = Vector3.one * scale;
+        obj.name = name;
+        return obj;
     }
 
     public static Vector3 RandVec(Vector3 min, Vector3 max)

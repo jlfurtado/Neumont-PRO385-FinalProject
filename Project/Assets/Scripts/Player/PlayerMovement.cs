@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody m_rigidbody;
+    [SerializeField] private CapstoneGenerator m_dargonGenerator;
     [SerializeField] private float m_torqueForce;
     [SerializeField] private float m_moveForce;
     [SerializeField] private float m_jumpForce;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerMovement m_otherPlayer;
     [SerializeField] private float m_lowPlayerDistanceThreshold;
     [SerializeField] private float m_highPlayerDistanceThreshold;
+    [SerializeField] private Color m_color;
     private AudioSource m_flap;
 
     // Use this for initialization
@@ -25,6 +27,12 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rigidbody = GetComponent<Rigidbody>();
         m_flap = GetComponent<AudioSource>();
+        GameObject meshChild = m_dargonGenerator.MakeInstance();
+        meshChild.transform.SetParent(this.transform);
+        meshChild.transform.localPosition = Vector3.zero;
+        meshChild.transform.localScale = Vector3.one;
+        Renderer renderer = meshChild.GetComponent<Renderer>();
+        renderer.material.color = m_color;
     }
 
     // Update is called once per frame
