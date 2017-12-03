@@ -11,7 +11,6 @@ public class RingPlacer : MonoBehaviour {
     [SerializeField] private int m_boxesPerY;
     [SerializeField] private int m_boxesPerZ;
     [SerializeField] [Range(0.0f, 1.0f)] private float m_shrinkBox = 1.0f;
-    private static System.Random rand = new System.Random();
 
     // Use this for initialization
     void Start()
