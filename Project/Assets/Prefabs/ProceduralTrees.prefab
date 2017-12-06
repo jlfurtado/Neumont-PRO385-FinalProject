@@ -58,7 +58,7 @@ MonoBehaviour:
   m_boxesPerX: 20
   m_boxesPerY: 1
   m_boxesPerZ: 20
-  m_shrinkBox: 0.95
+  m_shrinkBox: 0.9
   m_fireAmount: 5
   m_burnoutDuration: 3
   m_particlePrefab: {fileID: 1074766950060858, guid: cbc0364d31300d747a96db0293203886,

@@ -465,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
       propertyPath: m_LocalPosition.z
@@ -501,21 +501,6 @@ Prefab:
       propertyPath: m_otherPlayer
       value: 
       objectReference: {fileID: 1750270229}
-    - target: {fileID: 114752521663196754, guid: 07f0e771104d3be4f9b7979a29e09b84,
-        type: 2}
-      propertyPath: m_color.g
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 198634074622413416, guid: 07f0e771104d3be4f9b7979a29e09b84,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: 198634074622413416, guid: 07f0e771104d3be4f9b7979a29e09b84,
-        type: 2}
-      propertyPath: randomSeed
-      value: 1559222682
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
   m_IsPrefabParent: 0
@@ -574,7 +559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -610,41 +595,6 @@ Prefab:
       propertyPath: m_otherPlayer
       value: 
       objectReference: {fileID: 1911458055}
-    - target: {fileID: 114752521663196754, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: m_color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752521663196754, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: m_color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752521663196754, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: m_color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198598275156855760, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198598275156855760, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1479454723
-      objectReference: {fileID: 0}
-    - target: {fileID: 198598275156855760, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198598275156855760, guid: 24666a8d491dce84cb3854c6dc1c8a4a,
-        type: 2}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
   m_IsPrefabParent: 0
@@ -1310,6 +1260,21 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114960686913891684, guid: afd7e516988f2a94cac2833bff6c3e74,
+        type: 2}
+      propertyPath: m_shakeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114960686913891684, guid: afd7e516988f2a94cac2833bff6c3e74,
+        type: 2}
+      propertyPath: m_minShake
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114960686913891684, guid: afd7e516988f2a94cac2833bff6c3e74,
+        type: 2}
+      propertyPath: m_maxShake
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afd7e516988f2a94cac2833bff6c3e74, type: 2}

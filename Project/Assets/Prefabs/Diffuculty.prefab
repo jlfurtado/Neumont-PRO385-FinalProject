@@ -79,3 +79,5 @@ MonoBehaviour:
   m_timeLimit: 60
   m_objectsPerDifficulty: 3
   m_minObjective: 3
+  m_ringShakeDuration: 0.75
+  m_ringShakeIntensity: 150

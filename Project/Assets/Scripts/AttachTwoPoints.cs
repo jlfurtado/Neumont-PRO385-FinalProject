@@ -13,11 +13,16 @@ public class AttachTwoPoints : MonoBehaviour {
     [SerializeField] private Color m_highColor;
     [SerializeField] private float m_modEmit;
     [SerializeField] private float m_baseEmit;
+    [SerializeField] private float m_minShake = 1.0f;
+    [SerializeField] private float m_maxShake = 1.0f;
+    [SerializeField] private float m_shakeDuration = 1.0f;
 
+    private FollowCenter m_camera;
     private Renderer m_renderer;
 
     private void Awake()
     {
+        m_camera = Camera.main.GetComponent<FollowCenter>();
         m_renderer = GetComponent<Renderer>();
 
     }
@@ -48,6 +53,7 @@ public class AttachTwoPoints : MonoBehaviour {
             emit.rateOverTime = (interp * m_modEmit) + m_baseEmit;
             var shape = m_tetherParticle.shape;
             shape.radius = toObj2.magnitude / 2.0f;
+            m_camera.LowPriorityShake(m_shakeDuration, Mathf.Lerp(m_minShake, m_maxShake, interp));
         }
     }
 }

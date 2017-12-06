@@ -7,6 +7,8 @@ public class Difficulty : MonoBehaviour {
     [SerializeField] private float m_timeLimit = 60.0f;
     [SerializeField] private int m_objectsPerDifficulty = 5;
     [SerializeField] private int m_minObjective = 5;
+    [SerializeField] private float m_ringShakeDuration = 1.0f;
+    [SerializeField] private float m_ringShakeIntensity = 1.0f;
 
     private ScoreManager m_scoreManager;
     private SceneMover m_sceneMover;
@@ -18,6 +20,7 @@ public class Difficulty : MonoBehaviour {
     private float m_timeRemaining = 0.0f;
     private static System.Random rand = new System.Random();
     private bool m_timing = false;
+    private FollowCenter m_camera;
 
     public void SetText(Text time, Text objective, Text score)
     {
@@ -31,6 +34,7 @@ public class Difficulty : MonoBehaviour {
 
     private void Awake()
     {
+        m_camera = Camera.main.GetComponent<FollowCenter>();
         m_sceneMover = GetComponent<SceneMover>();
         m_scoreManager = GetComponent<ScoreManager>();
     }
@@ -119,6 +123,7 @@ public class Difficulty : MonoBehaviour {
     {
         m_ringsNeeded = Mathf.Max(0, m_ringsNeeded - 1);
         SetObjectiveText();
+        m_camera.AddShake(m_ringShakeDuration, m_ringShakeIntensity);
 
         if (DidWin())
         {

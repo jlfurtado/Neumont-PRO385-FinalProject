@@ -45,11 +45,29 @@ public class FollowCenter : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation((center - transform.position).normalized), rotateSpeed * Time.deltaTime);
     }
 
-    public void BeginShake(float shakeTime, float strength)
+    public void BeginShake(float shakeTime, float strength) // overwite shake
     {
         shakeStrength = strength;
         shakeTimer = shakeTime;
         shaking = true;
+    }
+
+    public void AddShake(float shakeTime, float strength) // overwite shake
+    {
+        shakeStrength += strength;
+        shakeTimer += shakeTime;
+        shaking = true;
+    }
+
+
+    public void LowPriorityShake(float shakeTime, float strength)
+    {
+        if (!shaking)
+        {
+            shakeStrength = strength;
+            shakeTimer = shakeTime;
+            shaking = true;
+        }
     }
 
     public void EndShake()
