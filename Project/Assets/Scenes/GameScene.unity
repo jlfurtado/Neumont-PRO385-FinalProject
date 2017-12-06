@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -465,7 +465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 07f0e771104d3be4f9b7979a29e09b84, type: 2}
       propertyPath: m_LocalPosition.z
@@ -559,7 +559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4824494907868176, guid: 24666a8d491dce84cb3854c6dc1c8a4a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -719,7 +719,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4914528522660648, guid: d773458f200794e419c1812fbfad3388, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4914528522660648, guid: d773458f200794e419c1812fbfad3388, type: 2}
       propertyPath: m_LocalPosition.z
@@ -755,11 +755,6 @@ Prefab:
       propertyPath: m_followed.Array.data[1]
       value: 
       objectReference: {fileID: 1911458053}
-    - target: {fileID: 114785406943653460, guid: d773458f200794e419c1812fbfad3388,
-        type: 2}
-      propertyPath: offsetMultiplier
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d773458f200794e419c1812fbfad3388, type: 2}
   m_IsPrefabParent: 0
@@ -875,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -997,6 +992,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1817585324 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+  m_PrefabInternal: {fileID: 1878601614}
+--- !u!114 &1817585325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817585324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfd6ce8ec36c41449ec2abeb4c76451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xSeed: 0.375
+  m_ySeed: 0.425
+  m_xDelta: 0.0007123457
+  m_yDelta: 0.00069876545
+  m_xMax: 0.5
+  m_yMax: 0.5
+  m_xMin: 0.35
+  m_yMin: 0.35
+--- !u!1001 &1878601614
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2000
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3319e29764c280844a96bbc235d964a8, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1911458053 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1265416807601966, guid: 07f0e771104d3be4f9b7979a29e09b84,
@@ -1055,7 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1321,7 +1393,12 @@ Prefab:
     - target: {fileID: 114166810347781630, guid: 900e28f4784e1694995fd987c6efffdf,
         type: 2}
       propertyPath: m_fireAmount
-      value: 1
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166810347781630, guid: 900e28f4784e1694995fd987c6efffdf,
+        type: 2}
+      propertyPath: m_burnoutDuration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 900e28f4784e1694995fd987c6efffdf, type: 2}

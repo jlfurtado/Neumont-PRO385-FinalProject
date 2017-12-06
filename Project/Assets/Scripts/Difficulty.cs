@@ -34,7 +34,6 @@ public class Difficulty : MonoBehaviour {
 
     private void Awake()
     {
-        m_camera = Camera.main.GetComponent<FollowCenter>();
         m_sceneMover = GetComponent<SceneMover>();
         m_scoreManager = GetComponent<ScoreManager>();
     }
@@ -93,11 +92,12 @@ public class Difficulty : MonoBehaviour {
     private void CreateWinConditionFromDifficulty()
     {
         int m_total = m_minObjective + m_difficulty * m_objectsPerDifficulty;
-        int m_minTrees = Mathf.Min((m_total / 2) + 1, m_total - 1);
+        int m_minTrees = Mathf.Min(((m_total * 2) / 3) + 1, m_total - 1);
         m_treesNeeded = m_minTrees + rand.Next(0, m_total - m_minTrees);
         m_ringsNeeded = m_total - m_treesNeeded;
         StartTimer();
         SetObjectiveText();
+        m_camera = Camera.main.GetComponent<FollowCenter>();
     }
 
     private void StartTimer()
