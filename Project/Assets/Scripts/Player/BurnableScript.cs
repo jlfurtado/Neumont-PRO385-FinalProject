@@ -63,6 +63,7 @@ public class BurnableScript : MonoBehaviour {
         {
             var main = m_burn.main;
             main.scalingMode = ParticleSystemScalingMode.Local;
+            main.startSpeed = 60 * (2 - (m_lowestBurn * 1.5f));
         }
         transform.localScale = m_maxScale * (2 - (m_lowestBurn * 1.5f));
         m_beingBurnt = false;
