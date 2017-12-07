@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_lowPlayerDistanceThreshold;
     [SerializeField] private float m_highPlayerDistanceThreshold;
     [SerializeField] private Color m_color;
+    [SerializeField] private float m_slerpSpeed = 0.1f;
+
     private AudioSource m_flap;
 
     // Use this for initialization
@@ -53,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
         m_rigidbody.velocity = new Vector3(direction.x * compensatedMove, m_rigidbody.velocity.y, direction.z * compensatedMove);
 
+        float turnRoll = Mathf.Clamp(0.5f * (Input.GetAxis(m_rotateAxis) + Input.GetAxis(m_horizontalAxis)), -1.0f, 1.0f);
+        m_rigidbody.rotation = Quaternion.Slerp(m_rigidbody.rotation, Quaternion.LookRotation(m_rigidbody.transform.forward, Vector3.LerpUnclamped(Vector3.up, Vector3.right, turnRoll)), m_slerpSpeed);
 
         if (Input.GetAxis(m_jumpAxis) != 0.0f)
         {
