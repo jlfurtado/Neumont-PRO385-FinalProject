@@ -97,7 +97,7 @@ public class Difficulty : MonoBehaviour {
         m_ringsNeeded = m_total - m_treesNeeded;
         StartTimer();
         SetObjectiveText();
-        m_camera = Camera.main.GetComponent<FollowCenter>();
+        m_camera = Camera.main == null ? null : Camera.main.GetComponent<FollowCenter>();
     }
 
     private void StartTimer()

@@ -34,7 +34,7 @@ public class SceneMover : MonoBehaviour {
     public void MoveToGameOver()
     {
         KeepTagged(Tags.DIFFICULTY);
-        DontKeepTagged(Tags.UI_MUSIC);
+        KeepTagged(Tags.UI_MUSIC);
         DontKeepTagged(Tags.GAME_BGM);
         SceneManager.LoadScene(Scenes.GAME_OVER);
     }

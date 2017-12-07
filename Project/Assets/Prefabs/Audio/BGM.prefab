@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fc1191e88a327428c747d9d8608b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_prefab: {fileID: 1581914046632760, guid: a595c691facb239458004504633f1276, type: 2}
+  m_prefab: {fileID: 1605028022308040, guid: 11018fd4a7f38544591d30daf72cd08d, type: 2}
   m_tag: GameBGM

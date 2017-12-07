@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fc1191e88a327428c747d9d8608b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_prefab: {fileID: 1947294924845562, guid: f712881099d0bc64086087448909882b, type: 2}
+  m_prefab: {fileID: 1217887395245788, guid: aa675eef698e12b45b8ebdd3cc24329d, type: 2}
   m_tag: UIMusic
