@@ -182,7 +182,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!65 &65210698730247082
 BoxCollider:
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_torqueForce: 3.5
   m_moveForce: 40
   m_jumpForce: 600
+  m_diveForce: 75
   m_movePenaltyCap: 0.67
   m_rotateAxis: Rotate
   m_verticalAxis: Vertical

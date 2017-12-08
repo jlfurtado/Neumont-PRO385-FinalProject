@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         float turnRoll = Mathf.Clamp(0.25f * (Input.GetAxis(m_rotateAxis) + Input.GetAxis(m_horizontalAxis)), -0.9f, 0.9f);
         float divePitch = Mathf.Clamp(Input.GetAxis(m_diveAxis) * 0.5f, -0.9f, 0.9f);
+        if (Input.GetAxis(m_jumpAxis) != 0.0f) { divePitch = 0.0f; }
         Vector3 up1 = Vector3.LerpUnclamped(Vector3.up, transform.right, turnRoll);
         Vector3 up2 = Vector3.LerpUnclamped(up1, transform.forward, divePitch);
         Vector3 newForward = Vector3.Lerp(Vector3.Cross(transform.right, up2), Vector3.up, divePitch);
