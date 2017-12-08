@@ -182,7 +182,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 16
   m_CollisionDetection: 1
 --- !u!65 &65210698730247082
 BoxCollider:
@@ -412,10 +412,12 @@ MonoBehaviour:
   m_verticalAxis: Vertical
   m_horizontalAxis: Horizontal
   m_jumpAxis: Jump
+  m_diveAxis: Dive
   m_otherPlayer: {fileID: 0}
   m_lowPlayerDistanceThreshold: 150
   m_highPlayerDistanceThreshold: 250
   m_color: {r: 1, g: 0.5019608, b: 0, a: 1}
+  m_slerpSpeed: 0.1
 --- !u!114 &114769389456445690
 MonoBehaviour:
   m_ObjectHideFlags: 1
